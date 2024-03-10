@@ -7,3 +7,5 @@
 
 ## Автор
 Кирилл Завадский
+
+![golang](https://github.com/KirillZavadskiy/go_backend/assets/130847000/68846534-e9c4-4994-b4e5-c4252e19ec6d)
