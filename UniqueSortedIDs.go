@@ -1,3 +1,4 @@
+// Сортировка чисел с отбором уникальных значений
 package main
 
 import (
@@ -8,10 +9,6 @@ import (
 var IDs = []int64{55, 2, 5, 55, 1, 6, 5, 21}
 
 func UniqueSortedIDs(IDs []int64) []int64 {
-	if len(IDs) < 2 {
-		return IDs
-	}
-
 	sort.SliceStable(IDs, func(i, j int) bool { return IDs[i] < IDs[j] })
 	uniqPointer := 0
 	for i := 1; i < len(IDs); i++ {

@@ -1,3 +1,4 @@
+// Работа со структурой с использованием указателей
 package main
 
 import "fmt"
@@ -27,7 +28,7 @@ func (u User) getScore() int {
 func main() {
 	u := User{"Kirill", 30, []int{1, 2, 3, 97, 5, 6}}
 	changeAge(&u)
-	u.setName("Den")
+	u.setName("Denis")
 	fmt.Println(&u)
 	fmt.Printf("Максимальный счет =%d", u.getScore())
 }
