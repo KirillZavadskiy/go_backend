@@ -10,3 +10,6 @@ fyne
 
 ### Автор
 Кирилл Завадский
+
+
+![Calculator](https://github.com/KirillZavadskiy/go_backend/assets/130847000/272eb406-0ca7-450d-a48b-d27cb9f17602)
