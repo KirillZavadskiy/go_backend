@@ -18,8 +18,9 @@ func main() {
 	label1 := widget.NewLabel("Введите первое число:")
 	entry1 := widget.NewEntry()
 
-	label2 := widget.NewLabel("Введите знак +, -, *, /")
-	entry2 := widget.NewEntry()
+	label2 := widget.NewLabel("Введите знак")
+	entry2 := widget.NewRadioGroup([]string{"+", "-", "*", "/"}, func(string) {})
+	entry2.Horizontal = true
 
 	label3 := widget.NewLabel("Введите второе число:")
 	entry3 := widget.NewEntry()
@@ -31,20 +32,18 @@ func main() {
 
 		if err != nil || er != nil {
 			answer.SetText("Ошибка ввода числа.")
-		} else if entry2.Text == "+" {
+		} else if entry2.Selected == "+" {
 			sum := n1 + n3
 			answer.SetText(fmt.Sprintf("Сумма = %f", sum))
-		} else if entry2.Text == "-" {
+		} else if entry2.Selected == "-" {
 			sub := n1 - n3
 			answer.SetText(fmt.Sprintf("Разница  = %f", sub))
-		} else if entry2.Text == "*" {
+		} else if entry2.Selected == "*" {
 			mul := n1 * n3
 			answer.SetText(fmt.Sprintf("Умножение = %f", mul))
-		} else if entry2.Text == "/" {
+		} else if entry2.Selected == "/" {
 			div := n1 / n3
 			answer.SetText(fmt.Sprintf("Деление = %f", div))
-		} else {
-			answer.SetText("Ошибка ввода знака.")
 		}
 	})
 
